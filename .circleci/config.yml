@@ -33,4 +33,4 @@ jobs: # a collection of steps
           severity-threshold: high
           token-variable: SNYK_TOKEN
       
-      - run: mvn compile # run the actual tests
+      - run: mvn -Dmaven.test.skip=true package # run the actual tests
