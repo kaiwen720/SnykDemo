@@ -2,6 +2,7 @@ version: 2.1 #
 
 orbs:
   snyk: snyk/snyk@0.0.8
+  dockerhub: circleci/docker@0.1.0
   
 jobs: # a collection of steps
   build: # runs not using Workflows must have a `build` job as entry point
