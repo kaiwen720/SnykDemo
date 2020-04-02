@@ -34,4 +34,4 @@ jobs: # a collection of steps
           severity-threshold: high
           token-variable: SNYK_TOKEN
       
-      - run: mvn -Dmaven.test.skip=true package # run the actual tests
+      - run: mvn -Dmaven.test.skip=true package com.google.cloud.tools:jib-maven-plugin:2.1.0:build -Dimage=omearaj/spring-petclinic:v1.0.0
