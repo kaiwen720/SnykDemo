@@ -35,7 +35,11 @@ jobs: # a collection of steps
           token-variable: SNYK_TOKEN
       
       - run: mvn -Dmaven.test.skip=true package jib:build
-      
+
+workflows:
+  build-deploy:
+    jobs:
+      - build
       - cloudfoundry/push:
           appname: spring-pc
           manifest: manifest.yml
