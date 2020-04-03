@@ -1,0 +1,6 @@
+---
+applications:
+- name: spring-pc
+  docker:
+    image: omearaj/spring-pc:v1.0.0
+  instances: 2
