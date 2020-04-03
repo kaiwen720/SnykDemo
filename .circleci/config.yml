@@ -37,10 +37,13 @@ jobs: # a collection of steps
       - run: mvn -Dmaven.test.skip=true package jib:build
 
 workflows:
+  version: 2
   build-deploy:
     jobs:
       - build
       - cloudfoundry/push:
+          requires:
+            - build
           appname: spring-pc
           manifest: manifest.yml
           org: WestPractice
