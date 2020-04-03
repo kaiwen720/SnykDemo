@@ -35,3 +35,9 @@ jobs: # a collection of steps
           token-variable: SNYK_TOKEN
       
       - run: mvn -Dmaven.test.skip=true package jib:build
+      
+      - cloudfoundry/push:
+          manifest: manifest.yml
+          org: WestPractice
+          package: null
+          space: development
